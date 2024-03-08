@@ -1,21 +1,24 @@
 package no.hvl.dat102.oblig2.uke6oppgave1.oppgave2;
 
+import no.hvl.dat102.oblig2.uke6.oppgave1.InsertSort;
+import no.hvl.dat102.oblig2.uke6.oppgave2.QuickSort;
+import no.hvl.dat102.oblig2.uke6.oppgave2.SelectionSort;
+
 public class malTid {
 	
 	public static <T extends Comparable<? super T>> long measureTime(Integer[] a, String measureTime) {
         long startTime = System.nanoTime();
         switch (measureTime) {
             case "insertionSort":
-                insertionSort(a);
+                InsertSort.InsertionSort(a, 0, 1);
                 break;
             case "selectionSort":
-                selectionSort(a);
+                SelectionSort.SelectionSort(a);
                 break;
             case "mergeSort":
-                mergeSort(a);
                 break;
             case "quickSort":
-                quickSort(a, 0, a.length - 1);
+                QuickSort.QuickSort(a,1,1);
                 break;
             default:
                 throw new IllegalArgumentException("Invalid sorting method name");

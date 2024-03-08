@@ -1,6 +1,6 @@
 package no.hvl.dat102.oblig2.uke6.oppgave1;
 
-public class InsertionSort {
+public class InsertSort {
 
     public static <T extends Comparable<? super T>> void InsertionSort(T[] a, int forste, int siste) {
 
