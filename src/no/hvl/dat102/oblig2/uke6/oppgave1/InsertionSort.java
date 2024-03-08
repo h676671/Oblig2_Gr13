@@ -1,6 +1,6 @@
-package no.hvl.dat102.oblig2.uke6oppgave1;
+package no.hvl.dat102.oblig2.uke6.oppgave1;
 
-public class Stabel {
+public class InsertionSort {
 
     public static <T extends Comparable<? super T>> void InsertionSort(T[] a, int forste, int siste) {
 

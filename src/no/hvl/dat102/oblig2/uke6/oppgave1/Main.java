@@ -1,4 +1,6 @@
-package no.hvl.dat102.oblig2.oppgave1;
+package no.hvl.dat102.oblig2.uke6.oppgave1;
+
+import no.hvl.dat102.oblig2.parenteser.ParentesSjekker;
 
 import java.util.Random;
 
@@ -8,12 +10,15 @@ public class Main {
         Integer[] tab = random(65000);
 
         long startTid = System.currentTimeMillis();
-        Stabel.InsertionSort(tab, 0, tab.length-1);
+        InsertionSort.InsertionSort(tab, 0, tab.length-1);
         long endTid = System.currentTimeMillis();
 
         long tid = endTid - startTid;
 
         System.out.println("Tidsbruk: " + tid/1000 + " sekunder");
+
+
+
     }
 
     public static <T> T[] random (int lengde) {

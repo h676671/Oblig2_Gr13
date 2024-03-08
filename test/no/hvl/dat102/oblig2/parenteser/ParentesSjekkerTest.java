@@ -3,6 +3,7 @@ package no.hvl.dat102.oblig2.parenteser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ParentesSjekkerTest {
@@ -36,8 +37,16 @@ class ParentesSjekkerTest {
     void testTrue() {
         assertTrue(ParentesSjekker.sjekkParenteser(s1));
         assertTrue(ParentesSjekker.sjekkParenteser(s5));
-        assertTrue(ParentesSjekker.sjekkParenteser(s6));
         assertTrue(ParentesSjekker.sjekkParenteser(s7));
     }
+
+	@Test
+	void testFalse() {
+
+		assertFalse(ParentesSjekker.sjekkParenteser(s2));
+		assertFalse(ParentesSjekker.sjekkParenteser(s3));
+		assertFalse(ParentesSjekker.sjekkParenteser(s4));
+		assertFalse(ParentesSjekker.sjekkParenteser(s6));
+	}
 
 }

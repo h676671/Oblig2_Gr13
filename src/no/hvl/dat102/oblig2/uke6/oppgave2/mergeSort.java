@@ -1,4 +1,4 @@
-package no.hvl.dat102.oblig2.uke6oppgave1.oppgave2;
+package no.hvl.dat102.oblig2.uke6.oppgave2;
 
 import java.util.Arrays;
 

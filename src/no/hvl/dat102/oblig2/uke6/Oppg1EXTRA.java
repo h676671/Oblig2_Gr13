@@ -1,4 +1,4 @@
-package no.hvl.dat102.oblig2.uke6oppgave1;
+package no.hvl.dat102.oblig2.uke6;
 
 public class Oppg1EXTRA {
 
