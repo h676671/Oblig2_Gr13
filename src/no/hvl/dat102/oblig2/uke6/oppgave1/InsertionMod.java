@@ -1,6 +1,6 @@
-package no.hvl.dat102.oblig2.oppgave1;
+package no.hvl.dat102.oblig2.uke6.oppgave1;
 
-public class StabelMod {
+public class InsertionMod {
     //🦦🦦🦦
     public static <T extends Comparable<? super T>> void InsertionSort(T[] a) {
 

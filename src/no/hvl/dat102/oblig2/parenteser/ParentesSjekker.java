@@ -14,20 +14,26 @@ public class ParentesSjekker {
 
         //Legger til alle chars som finnes i strengen og som er i STARTPARENTSER
         for (char c : s.toCharArray()) {
+            System.out.println("Nåverende char: " + c);
+
             if (STARTPARENTESER.contains(c)) {
+                System.out.println("Legger til i stack: " + c);
                 stabel.push(c);
 
             //Hvis vi har en SLUTTPARENTES i strenger sjekker vi først om stabel er tom.
             //Er stabel tom, betyr det at vi har sluttparentes uten startparentes
             } else if (SLUTTPARENTESER.contains(c)) {
                 if (stabel.isEmpty()) {
+                    System.out.println("Error: Stacken er tom og fant sluttparantesen " + c);
                     return false;
 
                 }
 
                 //Lagrer top verdien som top
                 char top = stabel.pop();
+                System.out.println("Popped fra stack: " + top);
                 if (!erParentesPar(top, c)) {
+                    System.out.println("Error: Ikke parentes par : " + top + " og " + c);
                     return false;
                 }
             }
