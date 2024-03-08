@@ -1,5 +1,7 @@
 package no.hvl.dat102.oblig2.uke6.oppgave2;
 
+import java.util.Arrays;
+
 public class main {
 	
 	 public static void main(String[] args) {
