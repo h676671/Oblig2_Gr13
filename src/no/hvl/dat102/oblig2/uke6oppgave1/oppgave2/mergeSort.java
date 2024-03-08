@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class mergeSort extends merge {
 	
-	private static <T extends Comparable<? super T>> mergeSort(Integer[] a) {
+	private static <T extends Comparable<? super T>> void mergeSort(Integer[] a) {
 		
 		if (a.length > 1) {
 			int mid = a.length / 2;
@@ -16,4 +16,8 @@ public class mergeSort extends merge {
 		}
 	}
 
-}
+
+		
+	}
+
+
