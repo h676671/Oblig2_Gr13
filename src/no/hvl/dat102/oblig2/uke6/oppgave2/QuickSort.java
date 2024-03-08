@@ -1,46 +1,84 @@
 package no.hvl.dat102.oblig2.uke6.oppgave2;
 
+import no.hvl.dat102.oblig2.uke6.oppgave1.InsertSort;
+
 import java.util.Arrays;
 
 public class QuickSort {
+    public static <T extends Comparable<? super T>> void quicksort(T[] a) {
+        quicksort(a, 0, a.length - 1);
+        InsertSort.InsertionSort(a, 0, a.length-1);
+    }
 
-    public static <T extends Comparable<? super T>> void QuickSort(T[] a, int forste, int siste) {
+    private static final int MIN_GRENSE = 3;
+    public static <T extends Comparable<? super T>> void quicksort(T[] a, int forste, int siste) {
 
-        if (forste < siste) {
-            int pivotIdx = partition(a, forste, siste);
-            QuickSort(a, forste, siste);
-            QuickSort(a, pivotIdx + 1, siste);
+        if (siste - forste + 1 < MIN_GRENSE) {
+            /*
+             * Basistilfelle: Gjør ingenting
+             * Boken kaller for sortering ved innsetting på elementer
+             */
+        } else {
+            int delepunkt = partition(a, forste, siste);
+            quicksort(a, forste, delepunkt - 1);
+            quicksort(a, delepunkt + 1, siste);
         }
-
     }
 
     private static <T extends Comparable<? super T>> int partition(T[] a, int forste, int siste) {
-        int pivotIdx = (forste + siste) / 2;
+        int midten = (forste + siste) / 2;
 
+        sortFirstMiddleLast(a, forste, midten, siste);
+        swap(a, midten, siste - 1);
+        int pivotIdx = siste - 1;
         T pivotVerdi = a[pivotIdx];
-        forste--;
-        siste++;
 
-        while (true) {
-            do {
-                forste++;
-            } while (a[forste].compareTo(pivotVerdi) < 0);
+        int fraV = forste + 1;
+        int fraH = siste - 2;
 
-            do {
-                siste--;
-            } while (a[siste].compareTo(pivotVerdi) > 0);
+        boolean ferdig = false;
 
-            if (forste >= siste) {
-                return siste;
+        while (!ferdig) {
+            while (a[fraV].compareTo(pivotVerdi) < 0) {
+                fraV++;
             }
 
-            T temp = a[forste];
-            a[forste] = a[siste];
-            a[siste] = temp;
+            while (a[fraH].compareTo(pivotVerdi) > 0) {
+                fraH--;
+            }
+
+            if (fraV < fraH) {
+                swap(a, fraV, fraH);
+                fraV++;
+                fraH--;
+            } else {
+                ferdig = true;
+            }
         }
+        swap(a, pivotIdx, fraV);
+        pivotIdx = fraV;
+
+        return pivotIdx;
        
         
 
+    }
+
+    private static <T extends Comparable<? super T>> void sortFirstMiddleLast(T[] a, int first, int mid, int last) {
+        order(a, first, mid); // Make a[first] <= a[mid]
+        order(a, mid, last); // Make a[mid] <= a[last]
+        order(a, first, mid); // Make a[first] <= a[mid]
+    } // end sortFirstMiddleLast
+
+    private static <T extends Comparable<? super T>> void order(T[] a, int i, int j) {
+        if (a[i].compareTo(a[j]) > 0) {
+            swap(a, i, j);
+        }
+    }
+    public static void swap(Object[] a, int i, int j) {
+        Object temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
     
     /*

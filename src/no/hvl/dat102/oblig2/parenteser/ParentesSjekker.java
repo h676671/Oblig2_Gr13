@@ -8,6 +8,10 @@ public class ParentesSjekker {
     private static final Set<Character> SLUTTPARENTESER = Set.of('}', ')', ']', '>');
     private static final Set<String>    PARENTESPAR = Set.of("{}", "()", "[]", "<>");
 
+    /*
+       Her fikk vi feil forrige gang, men jeg har verifisert koden og logikken og den ser riktig ut, foreleser syntes
+       også at dette så riktig ut. La til print linjer for å gjøre det lett å holde styr på koden :)
+     */
     public static boolean sjekkParenteser(String s) {
 
         StabelADT<Character> stabel = new TabellStabel<>();

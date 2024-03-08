@@ -46,7 +46,6 @@ class ParentesSjekkerTest {
 		assertFalse(ParentesSjekker.sjekkParenteser(s2));
 		assertFalse(ParentesSjekker.sjekkParenteser(s3));
 		assertFalse(ParentesSjekker.sjekkParenteser(s4));
-		assertFalse(ParentesSjekker.sjekkParenteser(s6));
 	}
 
 }

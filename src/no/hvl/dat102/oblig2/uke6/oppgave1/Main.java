@@ -1,19 +1,21 @@
 package no.hvl.dat102.oblig2.uke6.oppgave1;
 
 import no.hvl.dat102.oblig2.uke6.oppgave2.MergeSort;
+import no.hvl.dat102.oblig2.uke6.oppgave2.QuickSort;
 
 import java.util.Random;
 
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] tab = random(32000);
+        Integer[] tab = random(128000);
 
         long startTid = System.currentTimeMillis();
         //InsertSort.InsertionSort(tab, 0, tab.length-1);
         //InsertionMod.InsertionSort(tab);
         //SelectionSort.SelectionSort(tab);
-        MergeSort.mergesort(tab);
+        //MergeSort.mergesort(tab);
+        //QuickSort.quicksort(tab);
         long endTid = System.currentTimeMillis();
 
         long tid = endTid - startTid;
