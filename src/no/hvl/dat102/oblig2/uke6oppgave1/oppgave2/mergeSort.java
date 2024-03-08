@@ -2,17 +2,17 @@ package no.hvl.dat102.oblig2.uke6oppgave1.oppgave2;
 
 import java.util.Arrays;
 
-public class mergeSort {
+public class mergeSort extends merge {
 	
 	private static <T extends Comparable<? super T>> mergeSort(Integer[] a) {
 		
 		if (a.length > 1) {
 			int mid = a.length / 2;
-			Integer[] left = Arrays.copyOfRange(a, 0, mid);
-			Integer[] right = Arrays.copyOfRange(a, mid, a.length);
-			mergeSort(left);
-			mergeSort(right);
-			merge(a, left, right);
+			Integer[] venstre = Arrays.copyOfRange(a, 0, mid);
+			Integer[] høyre = Arrays.copyOfRange(a, mid, a.length);
+			mergeSort(venstre);
+			mergeSort(høyre);
+			merge(a, venstre, høyre);
 		}
 	}
 
