@@ -1,5 +1,7 @@
 package no.hvl.dat102.oblig2.uke6oppgave1.oppgave2;
 
+import java.util.Arrays;
+
 public class QuickSort {
 
     public static <T extends Comparable<? super T>> void QuickSort(T[] a, int forste, int siste) {
@@ -35,11 +37,12 @@ public class QuickSort {
             T temp = a[forste];
             a[forste] = a[siste];
             a[siste] = temp;
-
         }
+       
+        
 
     }
-
+    
     /*
     Vi hadde desverre ikke tid til å måle å teste hver sorterings-metode :(
      */
