@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] tab = random(65000);
+        Integer[] tab = random(93000);
 
         long startTid = System.currentTimeMillis();
         Stabel.InsertionSort(tab, 0, tab.length-1);

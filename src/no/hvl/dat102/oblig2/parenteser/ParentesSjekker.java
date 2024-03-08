@@ -12,13 +12,20 @@ public class ParentesSjekker {
 
         StabelADT<Character> stabel = new TabellStabel<>();
 
+        //Legger til alle chars som finnes i strengen og som er i STARTPARENTSER
         for (char c : s.toCharArray()) {
             if (STARTPARENTESER.contains(c)) {
                 stabel.push(c);
+
+            //Hvis vi har en SLUTTPARENTES i strenger sjekker vi først om stabel er tom.
+            //Er stabel tom, betyr det at vi har sluttparentes uten startparentes
             } else if (SLUTTPARENTESER.contains(c)) {
                 if (stabel.isEmpty()) {
                     return false;
+
                 }
+
+                //Lagrer top verdien som top
                 char top = stabel.pop();
                 if (!erParentesPar(top, c)) {
                     return false;
@@ -35,8 +42,8 @@ public class ParentesSjekker {
     private static boolean erSluttParentes(char c) {
         return SLUTTPARENTESER.contains(c);
     }
-
+    //Endret litt på parentesPar metoden
     private static boolean erParentesPar(char start, char slutt) {
-        return PARENTESPAR.contains(String.valueOf(start + slutt));
+        return PARENTESPAR.contains(String.valueOf(start) + String.valueOf(slutt));
     }
 }
