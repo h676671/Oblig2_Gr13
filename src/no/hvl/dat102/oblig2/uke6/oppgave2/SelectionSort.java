@@ -26,7 +26,5 @@ public class SelectionSort {
     }
 
 
-    /*
-    Vi hadde desverre ikke tid til å måle å teste hver sorterings-metode :(
-     */
+   
 }
