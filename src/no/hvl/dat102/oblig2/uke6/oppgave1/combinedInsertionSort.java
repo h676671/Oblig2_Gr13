@@ -4,7 +4,7 @@ public class combinedInsertionSort {
 	
 	//oppgave c
 	
-	public static void combinedInsertionSort(Object[] a) {
+	public static <T extends Comparable<? super T>> void combinedInsertionSort(Object[] a) {
 	    moveSmallestToFront(a);
 	    insertionSortWithDoubleInsert(a);
 	}
@@ -12,7 +12,7 @@ public class combinedInsertionSort {
 	private static void moveSmallestToFront(Object[] a) {
 	    int minIndex = 0;
 	    for (int i = 1; i < a.length; i++) {
-	        if (a[i].compareTo(a[minIndex]) < 0) {
+	    	if (a[i].compareTo(a[minIndex]) < 0) {
 	            minIndex = i;
 	        }
 	    }
