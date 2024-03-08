@@ -8,11 +8,11 @@ public class mergeSort {
 		
 		if (a.length > 1) {
 			int mid = a.length / 2;
-			Integer[] venstre = Arrays.copyOfRange(a, 0, mid);
-			Integer[] høyre = Arrays.copyOfRange(a, mid, a.length);
-			mergeSort(venstre);
-			mergeSort(høyre);
-			merge(a, vesntre, høyre);
+			Integer[] left = Arrays.copyOfRange(a, 0, mid);
+			Integer[] right = Arrays.copyOfRange(a, mid, a.length);
+			mergeSort(left);
+			mergeSort(right);
+			merge(a, left, right);
 		}
 	}
 
