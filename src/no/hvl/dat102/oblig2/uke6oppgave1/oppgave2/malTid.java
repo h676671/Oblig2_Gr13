@@ -2,9 +2,9 @@ package no.hvl.dat102.oblig2.uke6oppgave1.oppgave2;
 
 public class malTid {
 	
-	public static <T extends Comparable<? super T>> long measureTime(Integer[] a, String mal) {
+	public static <T extends Comparable<? super T>> long measureTime(Integer[] a, String measureTime) {
         long startTime = System.nanoTime();
-        switch (mal) {
+        switch (measureTime) {
             case "insertionSort":
                 insertionSort(a);
                 break;
