@@ -3,15 +3,15 @@ package no.hvl.dat102.oblig2.parenteser;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 
+
 /**
- * A class of stacks whose entries are stored in an array.
- *
- * @author Frank M. Carrano and Timothy M. Henry
- * @version 5.1
- * <p>
- * Fikset litt på av Lars-Petter Helland, januar 2024
+    A class of stacks whose entries are stored in an array.*
+    @author Frank M. Carrano and Timothy M. Henry
+    @version 5.1
+    <p>
+    Fikset litt på av Lars-Petter Helland, januar 2024
  */
-public final class TabellStabel<T> implements StabelADT<T> {
+public class TabellStabel<T> implements StabelADT<T> {
 
     private T[] stack;
     private int topIndex;
@@ -82,3 +82,5 @@ public final class TabellStabel<T> implements StabelADT<T> {
         }
     }
 }
+
+

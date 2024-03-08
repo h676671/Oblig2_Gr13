@@ -1,6 +1,6 @@
-package no.hvl.dat102.oblig2.oppgave1;
+package no.hvl.dat102.oblig2.uke6oppgave1;
 
-public class Oppg1OBLIG {
+public class Oppg1EXTRA {
 
     public static void main(String[] args) {
 
