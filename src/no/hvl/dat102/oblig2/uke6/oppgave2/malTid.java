@@ -12,7 +12,7 @@ public class malTid {
                 mergeSort.merge(a, a.length);
                 break;
             case "quickSort":
-                QuickSort.QuickSort(a, a.length, 1);
+                QuickSort.QuickSort(a, 0, a.length - 1);
                 break;
             default:
                 throw new IllegalArgumentException("Invalid sorting method name");
